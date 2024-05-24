@@ -1,7 +1,7 @@
 // built in module that provides functionality
 const fs = require('fs');
 
-function countStudents(path) {
+function countStudents (path) {
   try {
     // Read the file synchronously.
     const data = fs.readFileSync(path, 'utf8').trim();
@@ -31,7 +31,7 @@ function countStudents(path) {
         }
       }
     }
-// Log the number of students and their lists.
+    // Log the number of students and their lists.
     console.log(`Number of students: ${csCount + sweCount}`);
     console.log(`Number of students in CS: ${csCount}. List: ${csList.join(', ')}`);
     console.log(`Number of students in SWE: ${sweCount}. List: ${sweList.join(', ')}`);
