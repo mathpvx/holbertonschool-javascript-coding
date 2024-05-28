@@ -1,10 +1,11 @@
 const fs = require('fs');
 
-function countStudents (path) {
+function countStudents(path) {
   return new Promise((resolve, reject) => {
     // Attempt to read the file asynchronously
     fs.readFile(path, 'utf8', (error, data) => {
       if (error) {
+        // If an error occurs, reject the Promise
         reject(new Error('Cannot load the database'));
       } else {
         // Split the data by lines
